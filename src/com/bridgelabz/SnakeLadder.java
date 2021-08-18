@@ -7,15 +7,19 @@ public class SnakeLadder {
         int fullDayHour = 8;
         int DailyWage;
         int i;
-        int NumberOfWorkingDays = 20;
+        int NumberOfWorkingDays = 30;
         int store = 0;
         for (i=1; i<= NumberOfWorkingDays; i++)
         {
             double attendance = Math.floor(Math.random() * 2);
             store += attendance;
         }
-        System.out.println("Number of days the employee was present : "+store);
-        DailyWage = fullDayHour * WagePerHour * store;
-        System.out.println("Total Wage of Employee : "+DailyWage);
+        int totalWorkingHour = 8 * store;
+        if (totalWorkingHour >= 100)
+        {
+            DailyWage = WagePerHour * totalWorkingHour;
+            System.out.println("Employee's Wage is " +DailyWage +" Employee's Total Working Hour is " +totalWorkingHour);
+        }
+        else System.out.println("Employee's total working hour is less than 100.");
     }
 }
