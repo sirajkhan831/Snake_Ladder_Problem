@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 public class SnakeLadder {
+    private static int count = 0;
 
     public static void main(String[] args) {
         int store = 0;
@@ -27,10 +28,11 @@ public class SnakeLadder {
                 }
             }
         }
-        System.out.println("Player 1 has won");
+        System.out.println("Player 1 has won with a total dice roll of : "+count);
     }
 
     public static int roll() {
+        count++;
         return (int) Math.floor(Math.random() * 6) + 1;
     }
 
