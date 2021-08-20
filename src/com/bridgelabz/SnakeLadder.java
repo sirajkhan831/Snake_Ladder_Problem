@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public class SnakeLadder {
-
+    private static int count = 0;
     public static void main(String[] args) {
         int store = 0;
         int store1 = 0;
@@ -47,15 +47,16 @@ public class SnakeLadder {
                 }
             }
         }
-        System.out.println("Player 1 is in : " + store);
-        System.out.println("Player 2 is in : " + store1);
+        System.out.println("Player 1 finished in : " + store);
+        System.out.println("Player 2 finished in : " + store1);
         if (store > store1) {
-            System.out.println("Player 1 has won the game. The total number of time the dice was rolled by each player is : ");
+            System.out.println("Player 1 has won the game. The total number of time the dice was rolled per player is : "+count);
         } else
-            System.out.println("Player 2 has won the game. The total number of time the dice was rolled by each player is : ");
+            System.out.println("Player 2 has won the game. The total number of time the dice was rolled per player is : "+count);
     }
 
     public static int roll() {
+        count++;
         return (int) Math.floor(Math.random() * 6) + 1;
     }
 
