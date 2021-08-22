@@ -22,7 +22,7 @@ public class SnakeLadder {
                         System.out.println("Player1 got a ladder is now at : " + store);
                     }
                     case 2 -> {
-                        store -= roll;
+                        store -= 2 * roll;
                         System.out.println("Player1 got a snake is now at : " + store);
                     }
                 }
@@ -42,7 +42,7 @@ public class SnakeLadder {
                         System.out.println("Player2 got a ladder is now at : " + store1);
                     }
                     case 2 -> {
-                        store1 -= roll2;
+                        store1 -= 2 * roll2;
                         System.out.println("Player2 got a snake is now at : " + store1);
                     }
                 }
@@ -69,4 +69,4 @@ public class SnakeLadder {
         return (int) Math.floor(Math.random() * 3);
     }
 
-}
+ }
